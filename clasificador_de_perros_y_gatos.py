@@ -10,10 +10,7 @@ Original file is located at
 import tensorflow as tf
 import tensorflow_datasets as tfds
 
-#Correccion temporal (22/mayo/2022)
-#Tensorflow datasets tiene error al descargar el set de perros y gatos y lo solucionaron
-#el 16 de mayo pero sigue fallando en los colabs. Entonces se agrega esta linea adicional
-#Mas detalle aqui: https://github.com/tensorflow/datasets/issues/3918
+
 setattr(tfds.image_classification.cats_vs_dogs, '_URL',"https://download.microsoft.com/download/3/E/1/3E1C3F21-ECDB-4869-8368-6DEBA77B919F/kagglecatsanddogs_5340.zip")
 
 #Descargar el set de datos de perros y gatos
